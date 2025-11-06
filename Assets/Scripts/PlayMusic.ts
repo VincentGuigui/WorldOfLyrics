@@ -1,6 +1,5 @@
 import { ToggleButton } from 'SpectaclesInteractionKit.lspkg/Components/UI/ToggleButton/ToggleButton';
-//import * as fs from 'LensStudio:FileSystem';
-
+//import { fs } from 'LensStudio:FileSystem';
 
 @component
 export class PlayMusic extends BaseScriptComponent {
