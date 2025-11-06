@@ -222,24 +222,6 @@
   ScriptTypes:
     "":
       {}
-- !<ScriptComponent/1ded4818-74f7-4c54-a698-4065cb00cf0c>
-  PrefabRemaps:
-    []
-  Name: Touch Events
-  Enabled: true
-  ScriptAsset: !<reference> 5a2f2b64-d1f5-43a1-aa4e-37987f02a29f
-  ScriptInputsDefault:
-    enableHint: true
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      blockDefaultTouches: true
-      allowDoubleTap: true
-      enableHint: true
-  ScriptTypes:
-    "":
-      {}
 - !<SceneObject/22360d0b-2b8a-4dfd-81c6-72aba41062d5>
   PrefabRemaps:
     []
@@ -369,21 +351,6 @@
   RotationAngle: 0
   Pivot: {x: 0.000000, y: 0.000000}
   ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
-- !<SceneObject/31ed8e18-d38d-4b2f-90ce-3c0c2f5ca2e8>
-  PrefabRemaps:
-    []
-  Name: Touch Events
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 1ded4818-74f7-4c54-a698-4065cb00cf0c
 - !<ScriptComponent/447e33eb-95d0-4e28-8aa9-0c859a818500>
   PrefabRemaps:
     []
@@ -647,6 +614,23 @@
     []
   Components:
     - !<own> 883e861a-667f-447d-9279-154d1b0c0888
+- !<ScriptComponent/6df0062c-aa64-4f63-ba9c-19f184a9c09a>
+  PrefabRemaps:
+    []
+  Name: MusicElements
+  Enabled: true
+  ScriptAsset: !<reference> 9a9363b3-7b67-4194-8e41-b506e8211c6d
+  ScriptInputsDefault:
+    MusicElements: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      MusicElements: !<MappingBased.AssignableType[]>
+        []
+  ScriptTypes:
+    "":
+      {}
 - !<Image/707ab02e-ba6e-4191-b30b-05a92dd2914b>
   PrefabRemaps:
     []
@@ -854,6 +838,7 @@
     - !<own> 79bfbd3c-193b-41c7-8e26-dd768a222373
     - !<own> e08f4d5d-8536-4c41-87df-19671bdbe11c
     - !<own> e30fb810-81db-4a0c-9596-806d62e17ae0
+    - !<own> 6df0062c-aa64-4f63-ba9c-19f184a9c09a
 - !<Text/883e861a-667f-447d-9279-154d1b0c0888>
   PrefabRemaps:
     []
@@ -1062,7 +1047,6 @@
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
-    - !<own> 31ed8e18-d38d-4b2f-90ce-3c0c2f5ca2e8
     - !<own> af1a1842-e965-4199-8f74-4b97ad6acf52
   Components:
     []
@@ -1228,12 +1212,28 @@
   Enabled: true
   ScriptAsset: !<reference> 9a687c91-8f67-4702-ace1-97e55ddaad79
   ScriptInputsDefault:
-    {}
+    coverImage: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      coverImage: !<reference.Image> b5862e59-dc12-439b-86fc-8c72671ba0b4
+      MusicTitles: !<string[]>
+        - Birthday Song
+        - Crazy People
+        - Crowded City
+        - Family Time
+        - Flying through the sky
+        - Sunshine Dance
+        - Light in the Night
+      MusicCovers: !<reference.Material[]>
+        - !<reference> 3ec34ef3-1e9a-49fc-9d5a-93db8ecd4106
+        - !<reference> 6f00277b-93ae-4903-891d-9db69e008a0d
+        - !<reference> 624016e5-fbe9-4f4f-a867-38ce3f441f9f
+        - !<reference> baa12517-dbd6-4e69-b64b-c94c26fe36f4
+        - !<reference> 16748161-7106-4819-afcb-0ad8374628dd
+        - !<reference> 90e602e2-f8f9-4988-b841-16f31a06099b
+        - !<reference> 7c7114cd-d306-4a2f-949e-6e4039e7b4a5
+      coverImage: !<reference.Material> 00000000-0000-0000-0000-000000000000
       coverTitle: !<reference.Text> 883e861a-667f-447d-9279-154d1b0c0888
       _audioTrackAsset: !<reference.AudioTrackAsset> 6058c80b-062e-49a5-88d6-0b8799ddd91f
   ScriptTypes:

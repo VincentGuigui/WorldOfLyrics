@@ -1,8 +1,12 @@
 import { ToggleButton } from 'SpectaclesInteractionKit.lspkg/Components/UI/ToggleButton/ToggleButton';
-//import { fs } from 'LensStudio:FileSystem';
 
 @component
 export class PlayMusic extends BaseScriptComponent {
+  @input
+  private MusicTitles: string[] = []
+  
+  @input
+  private MusicCovers: Material[] = []
 
   @input("Component.Image")
   private coverImage: Image | undefined
@@ -79,7 +83,8 @@ export class PlayMusic extends BaseScriptComponent {
   updateCoverFlow() {
       console.log("coverIndex", this.coverIndex)
   //    script.coverImage.mainMaterial.texture = musicsList[coverIndex].cover;
-      this.coverTitle.text = this.musicsList[this.coverIndex].title;
+      this.coverTitle.text = this.MusicTitles[this.coverIndex];
+      this.coverImage.mainMaterial = this.MusicCovers[this.coverIndex];
   }
 
 
