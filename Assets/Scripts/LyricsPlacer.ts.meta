@@ -1,0 +1,59 @@
+- !<AssetImportMetadata/85caacfd-43d7-4d29-ad34-a9737f9aa620>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 3f9fdbd9-ff8c-4885-b415-042c760f0cf4
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 3f9fdbd9-ff8c-4885-b415-042c760f0cf4
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 91472353-6f65-4b91-9f32-a86d5c785530
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/91472353-6f65-4b91-9f32-a86d5c785530>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 0f55fc3a-56fc-46ff-b4bd-90e12305e270
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    Floor: false
+    Signage: false
+    Singing: false
+    Sky: false
+    Thinking: false
+    Wall: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - Thinking: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      Singing: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      Floor: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      Wall: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      Signage: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      Sky: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input SceneObject Thinking
+    - // @input SceneObject Singing
+    - // @input SceneObject Floor
+    - // @input SceneObject Wall
+    - // @input SceneObject Signage
+    - // @input SceneObject Sky

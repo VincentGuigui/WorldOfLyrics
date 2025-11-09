@@ -1,0 +1,61 @@
+- !<AssetImportMetadata/505ff24f-d037-258f-89e9-292dfeb62b39>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> bb4cc595-a060-4f26-9eec-69781476833e
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> bb4cc595-a060-4f26-9eec-69781476833e
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    AssetLibraryId: 17nZomIXpD6s6t5th8uzZk
+  AssetDataMap:
+    JavaScriptAsset: !<own> 249f9548-c74b-458c-abc1-a1e789c1132a
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/249f9548-c74b-458c-abc1-a1e789c1132a>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: bf505878-ab49-b3c6-3bc8-1d26ad9b77a5
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    blendshapeName: false
+    blendshapeObject: false
+    distanceScript: false
+    invert: false
+    meshObj: false
+    mode: false
+    multiplier: false
+    objects: false
+    transformMode: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - distanceScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      mode: 0
+      transformMode: 0
+      objects: !<reference.SceneObject[]>
+        []
+      multiplier: !<Vec3> {x: 1.000000, y: 1.000000, z: 1.000000}
+      blendshapeObject: !<reference.RenderMeshVisual[]>
+        []
+      blendshapeName: ""
+      invert: false
+      meshObj: !<reference.MaterialMeshVisual[]>
+        []
+  ScriptTypes:
+    -
+      {}

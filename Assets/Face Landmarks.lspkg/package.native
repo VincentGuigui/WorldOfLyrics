@@ -1,0 +1,41 @@
+- !<NativePackageDescriptor/e8552754-2604-497f-aed0-47a6224d4c33>
+  PackagePath: ""
+  StudioVersion:
+    major: 5
+    minor: 15
+    patch: 0
+    build: 25101318
+    type: Unset
+    buildFlavor: ""
+    timestamp: 0
+    commit: ""
+  Description: |+
+    The Face Landmarks Asset allows you to track 93 points on the face which we call Face Landmark.
+    
+    For more info check this guide: https://developers.snap.com/lens-studio/features/ar-tracking/face/face-templates/face-landmarks
+    
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 0
+  UpdateCheckpoint: 76
+  ExportUid: 08cb704e-c61e-4e83-845a-6ada15a4b6b4
+  ComponentUid: d195c40d-61db-47fb-b44a-f4a6ea45b2f0
+  PackagePolicy: CanBeUnpackedTransparent
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  Instantiable: !<reference> 00000000-0000-0000-0000-000000000000
+  AssetLibraryDependencyStructure: !<AssetLibraryDependencyStructure>
+    Name: ""
+    AssetId: ""
+    Hash: ""
+    Version:
+      major: 0
+      minor: 0
+      patch: 0
+      build: 0

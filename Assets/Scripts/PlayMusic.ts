@@ -2,11 +2,20 @@ import { ToggleButton } from 'SpectaclesInteractionKit.lspkg/Components/UI/Toggl
 
 @component
 export class PlayMusic extends BaseScriptComponent {
+  
   @input
   private MusicTitles: string[] = []
   
   @input
   private MusicCovers: Material[] = []
+
+  @input
+  private PlayMaterial: Material = undefined
+
+  @input
+  private PauseMaterial: Material = undefined
+
+  @input PlayPauseImageButton: Image = undefined
 
   @input("Component.Image")
   private coverImage: Image | undefined
@@ -55,7 +64,6 @@ export class PlayMusic extends BaseScriptComponent {
 
     // This script assumes that a ToggleButton (and Interactable + Collider) component have already been instantiated on the SceneObject.
     var tg=  ToggleButton.getTypeName()
-    console.log(tg)
     let toggleButton = this.sceneObject.getComponent(tg);
 
     let onStateChangedCallback = (state: boolean) => {
@@ -70,11 +78,13 @@ export class PlayMusic extends BaseScriptComponent {
     if (this._audioComponent == undefined) return;
     if (!this.isPlaying) {
       this._audioComponent.audioTrack = this._audioTrackAsset
+      this.PlayPauseImageButton.mainMaterial = this.PauseMaterial
       console.log("Play")
       this._audioComponent.play(1)
       this.isPlaying = true;
     } else {
       console.log("Pause")
+      this.PlayPauseImageButton.mainMaterial = this.PlayMaterial
       this._audioComponent.pause()
       this.isPlaying = false;
     }

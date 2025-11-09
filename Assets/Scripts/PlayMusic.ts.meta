@@ -28,6 +28,9 @@
   ScriptInputsHidden:
     MusicCovers: false
     MusicTitles: false
+    PauseMaterial: false
+    PlayMaterial: false
+    PlayPauseImageButton: false
     _audioTrackAsset: false
     coverImage: false
     coverTitle: false
@@ -44,7 +47,10 @@
         []
       MusicCovers: !<reference.Material[]>
         []
-      coverImage: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      PlayMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      PauseMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      PlayPauseImageButton: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      coverImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
       coverTitle: !<reference.Text> 00000000-0000-0000-0000-000000000000
       _audioTrackAsset: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
@@ -53,6 +59,9 @@
   InputLines:
     - "// @input string[] MusicTitles = {}"
     - "// @input Asset.Material[] MusicCovers = {}"
-    - // @input Component.Material coverImage
+    - // @input Asset.Material PlayMaterial
+    - // @input Asset.Material PauseMaterial
+    - // @input Component.Image PlayPauseImageButton
+    - // @input Component.Image coverImage
     - // @input Component.Text coverTitle
     - // @input Asset.AudioTrackAsset _audioTrackAsset

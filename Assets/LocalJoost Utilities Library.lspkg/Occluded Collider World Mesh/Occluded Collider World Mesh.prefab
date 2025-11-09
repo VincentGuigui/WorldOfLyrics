@@ -1,0 +1,68 @@
+- !<ObjectPrefab/9993ea2f-3d44-4a83-8474-5706c4991f4a>
+  PackagePath: ""
+  objects:
+    - !<own> 051c8592-9b73-4e6d-b6af-284c84c65903
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/051c8592-9b73-4e6d-b6af-284c84c65903>
+  PrefabRemaps:
+    - 051c8592-9b73-4e6d-b6af-284c84c65903: 051c8592-9b73-4e6d-4950-d7b37b39a6fc
+    - 23a09da1-8b5a-4dff-a560-91d60aee5720: 23a09da1-8b5a-4dff-5a9f-6e29f511a8df
+    - f7e2ad50-1407-450e-9415-16f6e3b3c856: f7e2ad50-1407-450e-6bea-e9091c4c37a9
+  Name: Occluded Collider World Mesh
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> f7e2ad50-1407-450e-9415-16f6e3b3c856
+    - !<own> 23a09da1-8b5a-4dff-a560-91d60aee5720
+- !<BodyComponent/23a09da1-8b5a-4dff-a560-91d60aee5720>
+  PrefabRemaps:
+    []
+  Name: Physics Body
+  Enabled: true
+  Shape: !<Mesh>
+    Mesh: !<reference> b7a8f0f6-5e10-4cf7-9c3b-f374390186e4
+    Convex: false
+    Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false
+  Dynamic: false
+  BodySetting: Density
+  BodySettingValue: 1.000000
+  Damping: 0.000000
+  AngularDamping: 0.000000
+- !<RenderMeshVisual/f7e2ad50-1407-450e-9415-16f6e3b3c856>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 9a9698ae-1aac-4eb9-a228-586914b1a6cb
+  Mesh: !<reference> b7a8f0f6-5e10-4cf7-9c3b-f374390186e4
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}

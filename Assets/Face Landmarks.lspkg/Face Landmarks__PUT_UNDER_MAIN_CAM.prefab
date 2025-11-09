@@ -1,0 +1,1166 @@
+- !<ObjectPrefab/71b476ae-868c-4599-87ce-7490aac62856>
+  PackagePath: ""
+  objects:
+    - !<own> 67a49472-7678-4de0-8e3a-cef0664b0ca4
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/0158f472-81e4-42fd-b8e7-a953e677caf8>
+  PrefabRemaps:
+    []
+  Name: Left Eyelids Distance Response
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> b319314f-0c17-4a4d-8a91-a0c126824268
+    - !<own> c13d5412-48ac-4805-8c22-803130a0505b
+- !<SceneObject/05ffbb42-0d8a-418d-ac68-4672835c66aa>
+  PrefabRemaps:
+    []
+  Name: Eye
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 11.637496, y: 20.907602, z: -0.586898}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 9ccc3159-6c1c-42eb-914e-e71a3413c8ae
+    - !<own> 394b65be-3703-4e70-918c-3036c6eb328e
+- !<SceneObject/0a7f0b59-6909-48dc-ab8c-79da29610576>
+  PrefabRemaps:
+    []
+  Name: EyeAnchor
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.024023, y: 0.024023, z: 0.024023}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> b2303c48-3193-44a2-96f9-b8ee28ee7a13
+    - !<own> f140d17a-e92e-4991-ad6f-d9185fcd2d8c
+    - !<own> d3090037-05ea-4f5d-8e11-a29d8fa0d58f
+  Components:
+    []
+- !<RenderMeshVisual/0bbf2f9e-6f38-492a-8d0c-0cf269681184>
+  PrefabRemaps:
+    []
+  Name: component_2
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 49c66a2d-beed-411c-a642-6d3f405699c6
+  Mesh: !<reference> c4fd7bae-3793-4212-8539-584b3440a06a
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: true
+  BlendShapes:
+    Pose_0: 1.000000
+- !<SceneObject/1ad24edc-e8fd-4b2e-af5d-6cf38c75bd5e>
+  PrefabRemaps:
+    []
+  Name: Mustache Anchor
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: -3.749495, z: 1.404551}
+    Rotation: {x: 0.000000, y: 0.000000, z: -0.495114}
+    Scale: {x: 0.013782, y: 0.013782, z: 0.013782}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 6d6a6b92-2237-437e-9e5d-d4cb164291f1
+  Components:
+    []
+- !<SceneObject/2957d8bb-818d-4df4-97db-62aea0197343>
+  PrefabRemaps:
+    []
+  Name: Mustache
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.058755, y: -0.081596, z: -1.040001}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> c7b671e1-c842-43fe-98cc-c2746f9aa6ab
+    - !<own> 4028fbbd-f2a7-4bd0-a730-6bd8a675468c
+  Components:
+    []
+- !<ScriptComponent/2dba9dc3-3f32-4665-a973-e002e4b7a088>
+  PrefabRemaps:
+    []
+  Name: FaceLandmarksDistanceTrigger
+  Enabled: true
+  ScriptAsset: !<reference> 0f9cc2d9-46bb-478d-aad5-5e08f49f0ef4
+  ScriptInputsDefault:
+    pointsMode: true
+    firstPredefinedPoints: true
+    secondPredefinedPoints: true
+    smoothing: true
+    smoothingAmount: true
+    printDistance: true
+    customTrigger: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      pointsMode: 0
+      firstPoint: !<int[]>
+        - 37
+        - 38
+      secondPoint: !<int[]>
+        - 41
+        - 40
+      firstPredefinedPoints: 0
+      secondPredefinedPoints: 0
+      minValue: 0.190000
+      maxValue: 0.100000
+      smoothing: false
+      smoothingAmount: !<float> 0.000000
+      printDistance: false
+      customTrigger: false
+      minTrigger: ""
+      maxTrigger: ""
+      headBinding: !<reference.Head> e09a97e9-379f-41c7-8da4-3e30435e77c1
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/394018c0-22bd-4de8-8772-e3a7df2e4739>
+  PrefabRemaps:
+    []
+  Name: Eyelid_Top
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 11.637496, y: 0.000000, z: 13.962840}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> a94260ea-ecfc-45f9-9e0d-0f57a321b3f0
+- !<RenderMeshVisual/394b65be-3703-4e70-918c-3036c6eb328e>
+  PrefabRemaps:
+    []
+  Name: component_4
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 8a1914a0-3bcb-4593-bf85-b5fcbb1019b5
+  Mesh: !<reference> 7f1c507c-478a-4ee9-b842-15148014a911
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/3b7331c9-538e-4242-b6ea-6fca1f1d8460>
+  PrefabRemaps:
+    []
+  Name: Eye Left
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -2.745481, y: -0.081596, z: -0.114119}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.210474, y: 0.210474, z: 0.210474}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 9833af87-c7b4-41e6-974c-255bb36ae4bf
+    - !<own> f0e1deeb-60ca-4199-8064-0128e8942f7d
+    - !<own> 57681deb-1734-402c-ac18-573dfd22fb39
+    - !<own> 0158f472-81e4-42fd-b8e7-a953e677caf8
+  Components:
+    []
+- !<SceneObject/3e62d69f-a8c8-4dd1-9956-c226656b5852>
+  PrefabRemaps:
+    []
+  Name: Eyelid_Bottom
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 11.637496, y: 0.000000, z: 13.962840}
+    Rotation: {x: 0.000000, y: -0.000000, z: -180.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 0bbf2f9e-6f38-492a-8d0c-0cf269681184
+- !<SceneObject/3fed0714-26a3-4681-bb63-62c421648ee5>
+  PrefabRemaps:
+    []
+  Name: Pupil Anchor
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> e4411060-8e63-47b9-988b-4180c7a2d489
+  Components:
+    []
+- !<SceneObject/4028fbbd-f2a7-4bd0-a730-6bd8a675468c>
+  PrefabRemaps:
+    []
+  Name: "Pin To Uppder Lip Left [OBJECTS_HERE]"
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 851247b6-7c26-428e-9722-e039cc63d098
+  Components:
+    - !<own> 8214103a-e647-4012-8d41-bd53ddd8d904
+- !<RenderMeshVisual/40de14dc-afaf-4f40-bed0-0a2aae463010>
+  PrefabRemaps:
+    []
+  Name: component_4
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 8a1914a0-3bcb-4593-bf85-b5fcbb1019b5
+  Mesh: !<reference> 7f1c507c-478a-4ee9-b842-15148014a911
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ScriptComponent/470e1f4e-3735-4264-8f9f-f01c87b647e6>
+  PrefabRemaps:
+    []
+  Name: FaceLandmarksDistanceResponse
+  Enabled: true
+  ScriptAsset: !<reference> bb4cc595-a060-4f26-9eec-69781476833e
+  ScriptInputsDefault:
+    transformMode: true
+    objects: true
+    multiplier: true
+    meshObj: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      distanceScript: !<reference.ScriptComponent> 5f3af91d-abc9-4769-84c3-33a802305a58
+      mode: 1
+      transformMode: 0
+      objects: !<reference.SceneObject[]>
+        []
+      multiplier: !<Vec3> {x: 1.000000, y: 1.000000, z: 1.000000}
+      blendshapeObject: !<reference.RenderMeshVisual[]>
+        - !<reference> 0bbf2f9e-6f38-492a-8d0c-0cf269681184
+      blendshapeName: Pose_0
+      invert: true
+      meshObj: !<reference.MaterialMeshVisual[]>
+        []
+  ScriptTypes:
+    "":
+      {}
+- !<RenderMeshVisual/471bdc66-b01d-4ad1-9345-a3931a4c0701>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> bb8f819e-47ea-4058-b189-ddceac0cafac
+  Mesh: !<reference> eaeafe2d-43e0-4f92-be5c-d62bdfbcb94a
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/5078fbc7-410a-483d-a5b8-d1fd5bf574ee>
+  PrefabRemaps:
+    []
+  Name: Mustache
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: -180.000000, y: 1.269837, z: -180.000000}
+    Scale: {x: 0.700000, y: 0.700000, z: 0.700000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 471bdc66-b01d-4ad1-9345-a3931a4c0701
+- !<RenderMeshVisual/562e0587-e167-4bd4-906d-469b7fa873ad>
+  PrefabRemaps:
+    []
+  Name: component_2
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 87aa8897-eec8-4489-b543-f0388b0985a2
+  Mesh: !<reference> c4fd7bae-3793-4212-8539-584b3440a06a
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: true
+  BlendShapes:
+    Pose_0: 1.000000
+- !<SceneObject/57681deb-1734-402c-ac18-573dfd22fb39>
+  PrefabRemaps:
+    []
+  Name: Left Eyelids Distance
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 2dba9dc3-3f32-4665-a973-e002e4b7a088
+- !<SceneObject/5c8fe9a3-1795-4243-a6a2-ab35b9fe9adc>
+  PrefabRemaps:
+    []
+  Name: Face Landmarks
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 3b7331c9-538e-4242-b6ea-6fca1f1d8460
+    - !<own> f5a0d356-841c-48e0-9a2a-2793e9292b5d
+    - !<own> 2957d8bb-818d-4df4-97db-62aea0197343
+  Components:
+    - !<own> e09a97e9-379f-41c7-8da4-3e30435e77c1
+- !<ScriptComponent/5e9e197b-3423-40a3-96c5-bf786525187e>
+  PrefabRemaps:
+    []
+  Name: FaceLandmarksDistanceResponse
+  Enabled: true
+  ScriptAsset: !<reference> bb4cc595-a060-4f26-9eec-69781476833e
+  ScriptInputsDefault:
+    transformMode: true
+    objects: true
+    multiplier: true
+    meshObj: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      distanceScript: !<reference.ScriptComponent> 5f3af91d-abc9-4769-84c3-33a802305a58
+      mode: 1
+      transformMode: 0
+      objects: !<reference.SceneObject[]>
+        []
+      multiplier: !<Vec3> {x: 1.000000, y: 1.000000, z: 1.000000}
+      blendshapeObject: !<reference.RenderMeshVisual[]>
+        - !<reference> a94260ea-ecfc-45f9-9e0d-0f57a321b3f0
+      blendshapeName: Pose_0
+      invert: true
+      meshObj: !<reference.MaterialMeshVisual[]>
+        []
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/5f3af91d-abc9-4769-84c3-33a802305a58>
+  PrefabRemaps:
+    []
+  Name: FaceLandmarksDistanceTrigger
+  Enabled: true
+  ScriptAsset: !<reference> 0f9cc2d9-46bb-478d-aad5-5e08f49f0ef4
+  ScriptInputsDefault:
+    pointsMode: true
+    firstPredefinedPoints: true
+    secondPredefinedPoints: true
+    smoothing: true
+    smoothingAmount: true
+    printDistance: true
+    customTrigger: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      pointsMode: 0
+      firstPoint: !<int[]>
+        - 43
+        - 44
+      secondPoint: !<int[]>
+        - 47
+        - 46
+      firstPredefinedPoints: 0
+      secondPredefinedPoints: 0
+      minValue: 0.190000
+      maxValue: 0.100000
+      smoothing: false
+      smoothingAmount: !<float> 0.000000
+      printDistance: false
+      customTrigger: false
+      minTrigger: ""
+      maxTrigger: ""
+      headBinding: !<reference.Head> e09a97e9-379f-41c7-8da4-3e30435e77c1
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/6538ba99-0aa8-42f1-8849-f97405d50c17>
+  PrefabRemaps:
+    []
+  Name: PinToFaceLandmarks
+  Enabled: true
+  ScriptAsset: !<reference> fa2f7d72-60b7-45ef-b9dc-c54fcfd4da09
+  ScriptInputsDefault:
+    placementMode: true
+    positionOffset: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      placementMode: 0
+      pointsMode: 1
+      points: !<int[]>
+        - 36
+        - 37
+        - 38
+        - 39
+        - 40
+        - 41
+      predefinedPoints: 13
+      positionOffset: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      headBinding: !<reference.Head> e09a97e9-379f-41c7-8da4-3e30435e77c1
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/67a49472-7678-4de0-8e3a-cef0664b0ca4>
+  PrefabRemaps:
+    - 0158f472-81e4-42fd-b8e7-a953e677caf8: 0158f472-81e4-42fd-4718-56ac19883507
+    - 05ffbb42-0d8a-418d-ac68-4672835c66aa: 05ffbb42-0d8a-418d-5397-b98d7ca39955
+    - 0a7f0b59-6909-48dc-ab8c-79da29610576: 0a7f0b59-6909-48dc-5473-8625d69efa89
+    - 0bbf2f9e-6f38-492a-8d0c-0cf269681184: 0bbf2f9e-6f38-492a-72f3-f30d9697ee7b
+    - 1ad24edc-e8fd-4b2e-af5d-6cf38c75bd5e: 1ad24edc-e8fd-4b2e-50a2-930c738a42a1
+    - 2957d8bb-818d-4df4-97db-62aea0197343: 2957d8bb-818d-4df4-6824-9d515fe68cbc
+    - 2dba9dc3-3f32-4665-a973-e002e4b7a088: 2dba9dc3-3f32-4665-568c-1ffd1b485f77
+    - 394018c0-22bd-4de8-8772-e3a7df2e4739: 394018c0-22bd-4de8-788d-1c5820d1b8c6
+    - 394b65be-3703-4e70-918c-3036c6eb328e: 394b65be-3703-4e70-6e73-cfc93914cd71
+    - 3b7331c9-538e-4242-b6ea-6fca1f1d8460: 3b7331c9-538e-4242-4915-9035e0e27b9f
+    - 3e62d69f-a8c8-4dd1-9956-c226656b5852: 3e62d69f-a8c8-4dd1-66a9-3dd99a94a7ad
+    - 3fed0714-26a3-4681-bb63-62c421648ee5: 3fed0714-26a3-4681-449c-9d3bde9b711a
+    - 4028fbbd-f2a7-4bd0-a730-6bd8a675468c: 4028fbbd-f2a7-4bd0-58cf-9427598ab973
+    - 40de14dc-afaf-4f40-bed0-0a2aae463010: 40de14dc-afaf-4f40-412f-f5d551b9cfef
+    - 470e1f4e-3735-4264-8f9f-f01c87b647e6: 470e1f4e-3735-4264-7060-0fe37849b819
+    - 471bdc66-b01d-4ad1-9345-a3931a4c0701: 471bdc66-b01d-4ad1-6cba-5c6ce5b3f8fe
+    - 5078fbc7-410a-483d-a5b8-d1fd5bf574ee: 5078fbc7-410a-483d-5a47-2e02a40a8b11
+    - 562e0587-e167-4bd4-906d-469b7fa873ad: 562e0587-e167-4bd4-6f92-b96480578c52
+    - 57681deb-1734-402c-ac18-573dfd22fb39: 57681deb-1734-402c-53e7-a8c202dd04c6
+    - 5c8fe9a3-1795-4243-a6a2-ab35b9fe9adc: 5c8fe9a3-1795-4243-595d-54ca46016523
+    - 5e9e197b-3423-40a3-96c5-bf786525187e: 5e9e197b-3423-40a3-693a-40879adae781
+    - 5f3af91d-abc9-4769-84c3-33a802305a58: 5f3af91d-abc9-4769-7b3c-cc57fdcfa5a7
+    - 6538ba99-0aa8-42f1-8849-f97405d50c17: 6538ba99-0aa8-42f1-77b6-068bfa2af3e8
+    - 67a49472-7678-4de0-8e3a-cef0664b0ca4: 67a49472-7678-4de0-71c5-310f99b4f35b
+    - 6d6a6b92-2237-437e-9e5d-d4cb164291f1: 6d6a6b92-2237-437e-61a2-2b34e9bd6e0e
+    - 77b904dd-5718-44a1-82b5-ced410499a13: 77b904dd-5718-44a1-7d4a-312befb665ec
+    - 8214103a-e647-4012-8d41-bd53ddd8d904: 8214103a-e647-4012-72be-42ac222726fb
+    - 84d5df8c-f2d0-4016-8a9a-09368ad6f4b9: 84d5df8c-f2d0-4016-7565-f6c975290b46
+    - 851247b6-7c26-428e-9722-e039cc63d098: 851247b6-7c26-428e-68dd-1fc6339c2f67
+    - 911ed87c-1f3f-487d-aae3-8e90e65e0b38: 911ed87c-1f3f-487d-551c-716f19a1f4c7
+    - 94946594-5b41-46c8-98bc-d8cb2d9ee0fb: 94946594-5b41-46c8-6743-2734d2611f04
+    - 95562413-6eb0-4d68-bb19-fb6ef2a3afc9: 95562413-6eb0-4d68-44e6-04910d5c5036
+    - 9833af87-c7b4-41e6-974c-255bb36ae4bf: 9833af87-c7b4-41e6-68b3-daa44c951b40
+    - 9ccc3159-6c1c-42eb-914e-e71a3413c8ae: 9ccc3159-6c1c-42eb-6eb1-18e5cbec3751
+    - a94260ea-ecfc-45f9-9e0d-0f57a321b3f0: a94260ea-ecfc-45f9-61f2-f0a85cde4c0f
+    - afb911b6-8f3b-4488-921e-33f6b2b02c35: afb911b6-8f3b-4488-6de1-cc094d4fd3ca
+    - b0045f32-623d-4045-8a66-ca21b86c44ea: b0045f32-623d-4045-7599-35de4793bb15
+    - b2303c48-3193-44a2-96f9-b8ee28ee7a13: b2303c48-3193-44a2-6906-4711d71185ec
+    - b319314f-0c17-4a4d-8a91-a0c126824268: b319314f-0c17-4a4d-756e-5f3ed97dbd97
+    - b7795044-331b-4ffa-845e-aae5c77f1352: b7795044-331b-4ffa-7ba1-551a3880ecad
+    - c0e8b730-dffd-4a51-9510-1c64e5d2e180: c0e8b730-dffd-4a51-6aef-e39b1a2d1e7f
+    - c13d5412-48ac-4805-8c22-803130a0505b: c13d5412-48ac-4805-73dd-7fcecf5fafa4
+    - c2c7558f-c6c8-48ed-affc-f460b2c445f2: c2c7558f-c6c8-48ed-5003-0b9f4d3bba0d
+    - c7b671e1-c842-43fe-98cc-c2746f9aa6ab: c7b671e1-c842-43fe-6733-3d8b90655954
+    - d3090037-05ea-4f5d-8e11-a29d8fa0d58f: d3090037-05ea-4f5d-71ee-5d62705f2a70
+    - d30fb9f4-4ff9-4001-8116-cb73dd124465: d30fb9f4-4ff9-4001-7ee9-348c22edbb9a
+    - d545d927-dcb7-47a5-a2f7-7ce9f283c0d3: d545d927-dcb7-47a5-5d08-83160d7c3f2c
+    - d5cbb6b3-6971-47b1-9078-8f90fbdccf6d: d5cbb6b3-6971-47b1-6f87-706f04233092
+    - d65c740e-f4f2-4cc3-8cf0-f936dd9f253c: d65c740e-f4f2-4cc3-730f-06c92260dac3
+    - e09a97e9-379f-41c7-8da4-3e30435e77c1: e09a97e9-379f-41c7-725b-c1cfbca1883e
+    - e41bbebb-c519-498c-871c-aca41866e092: e41bbebb-c519-498c-78e3-535be7991f6d
+    - e4411060-8e63-47b9-988b-4180c7a2d489: e4411060-8e63-47b9-6774-be7f385d2b76
+    - f0e1deeb-60ca-4199-8064-0128e8942f7d: f0e1deeb-60ca-4199-7f9b-fed7176bd082
+    - f140d17a-e92e-4991-ad6f-d9185fcd2d8c: f140d17a-e92e-4991-5290-26e7a032d273
+    - f30797ad-e717-4323-8090-263ba5cbde55: f30797ad-e717-4323-7f6f-d9c45a3421aa
+    - f5a0d356-841c-48e0-9a2a-2793e9292b5d: f5a0d356-841c-48e0-65d5-d86c16d6d4a2
+  Name: Face Landmarks__PUT_UNDER_MAIN_CAM
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 5c8fe9a3-1795-4243-a6a2-ab35b9fe9adc
+  Components:
+    []
+- !<SceneObject/6d6a6b92-2237-437e-9e5d-d4cb164291f1>
+  PrefabRemaps:
+    []
+  Name: Mustache
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 9.245755, z: 0.000000}
+    Scale: {x: 0.700000, y: 0.700000, z: 0.700000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> b0045f32-623d-4045-8a66-ca21b86c44ea
+- !<ScriptComponent/77b904dd-5718-44a1-82b5-ced410499a13>
+  PrefabRemaps:
+    []
+  Name: PinToFaceLandmarks
+  Enabled: true
+  ScriptAsset: !<reference> fa2f7d72-60b7-45ef-b9dc-c54fcfd4da09
+  ScriptInputsDefault:
+    placementMode: true
+    pointsMode: true
+    predefinedPoints: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      placementMode: 0
+      pointsMode: 0
+      points: !<int[]>
+        - 51
+        - 52
+        - 53
+        - 54
+      predefinedPoints: 0
+      positionOffset: !<Vec3> {x: -0.750000, y: 0.750000, z: 10.000000}
+      headBinding: !<reference.Head> e09a97e9-379f-41c7-8da4-3e30435e77c1
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/8214103a-e647-4012-8d41-bd53ddd8d904>
+  PrefabRemaps:
+    []
+  Name: PinToFaceLandmarks
+  Enabled: true
+  ScriptAsset: !<reference> fa2f7d72-60b7-45ef-b9dc-c54fcfd4da09
+  ScriptInputsDefault:
+    placementMode: true
+    pointsMode: true
+    predefinedPoints: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      placementMode: 0
+      pointsMode: 0
+      points: !<int[]>
+        - 48
+        - 49
+        - 50
+        - 51
+      predefinedPoints: 0
+      positionOffset: !<Vec3> {x: 0.750000, y: 0.750000, z: 10.000000}
+      headBinding: !<reference.Head> e09a97e9-379f-41c7-8da4-3e30435e77c1
+  ScriptTypes:
+    "":
+      {}
+- !<RenderMeshVisual/84d5df8c-f2d0-4016-8a9a-09368ad6f4b9>
+  PrefabRemaps:
+    []
+  Name: component_6
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> c9e36fb8-c7a1-41da-a350-76aa44eb85d5
+  Mesh: !<reference> 724aae55-eda7-43fc-8430-938c007e4303
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/851247b6-7c26-428e-9722-e039cc63d098>
+  PrefabRemaps:
+    []
+  Name: Mustache Anchor
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: -3.749495, z: 1.404551}
+    Rotation: {x: 0.000000, y: 0.000000, z: -0.495114}
+    Scale: {x: 0.013782, y: 0.013782, z: 0.013782}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 5078fbc7-410a-483d-a5b8-d1fd5bf574ee
+  Components:
+    []
+- !<SceneObject/911ed87c-1f3f-487d-aae3-8e90e65e0b38>
+  PrefabRemaps:
+    []
+  Name: EyeAnchor
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.024023, y: 0.024023, z: 0.024023}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 394018c0-22bd-4de8-8772-e3a7df2e4739
+    - !<own> 3e62d69f-a8c8-4dd1-9956-c226656b5852
+    - !<own> 05ffbb42-0d8a-418d-ac68-4672835c66aa
+  Components:
+    []
+- !<SceneObject/94946594-5b41-46c8-98bc-d8cb2d9ee0fb>
+  PrefabRemaps:
+    []
+  Name: Right Eyelids Distance Responses
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 4.751186, y: 4.751186, z: 4.751186}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 470e1f4e-3735-4264-8f9f-f01c87b647e6
+    - !<own> 5e9e197b-3423-40a3-96c5-bf786525187e
+- !<ScriptComponent/95562413-6eb0-4d68-bb19-fb6ef2a3afc9>
+  PrefabRemaps:
+    []
+  Name: PinToFaceLandmarks
+  Enabled: true
+  ScriptAsset: !<reference> fa2f7d72-60b7-45ef-b9dc-c54fcfd4da09
+  ScriptInputsDefault:
+    placementMode: true
+    positionOffset: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      placementMode: 0
+      pointsMode: 1
+      points: !<int[]>
+        - 36
+        - 37
+        - 38
+        - 39
+        - 40
+        - 41
+      predefinedPoints: 4
+      positionOffset: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      headBinding: !<reference.Head> e09a97e9-379f-41c7-8da4-3e30435e77c1
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/9833af87-c7b4-41e6-974c-255bb36ae4bf>
+  PrefabRemaps:
+    []
+  Name: "Pin To Left Pupil [OBJECTS_HERE]"
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 4.751186, y: 4.751186, z: 4.751186}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 3fed0714-26a3-4681-bb63-62c421648ee5
+  Components:
+    - !<own> 95562413-6eb0-4d68-bb19-fb6ef2a3afc9
+- !<RenderMeshVisual/9ccc3159-6c1c-42eb-914e-e71a3413c8ae>
+  PrefabRemaps:
+    []
+  Name: component_5
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> c9e36fb8-c7a1-41da-a350-76aa44eb85d5
+  Mesh: !<reference> b17d3798-44e3-4f05-8807-3748011372ad
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<RenderMeshVisual/a94260ea-ecfc-45f9-9e0d-0f57a321b3f0>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 49c66a2d-beed-411c-a642-6d3f405699c6
+  Mesh: !<reference> 2b8c1997-20fa-4296-8b73-093353c8b846
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: true
+  BlendShapes:
+    Pose_0: 1.000000
+- !<ScriptComponent/afb911b6-8f3b-4488-921e-33f6b2b02c35>
+  PrefabRemaps:
+    []
+  Name: PinToFaceLandmarks
+  Enabled: true
+  ScriptAsset: !<reference> fa2f7d72-60b7-45ef-b9dc-c54fcfd4da09
+  ScriptInputsDefault:
+    placementMode: true
+    pointsMode: true
+    positionOffset: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      placementMode: 0
+      pointsMode: 0
+      points: !<int[]>
+        - 43
+        - 44
+        - 45
+        - 46
+        - 47
+        - 42
+      predefinedPoints: 14
+      positionOffset: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      headBinding: !<reference.Head> e09a97e9-379f-41c7-8da4-3e30435e77c1
+  ScriptTypes:
+    "":
+      {}
+- !<RenderMeshVisual/b0045f32-623d-4045-8a66-ca21b86c44ea>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> bb8f819e-47ea-4058-b189-ddceac0cafac
+  Mesh: !<reference> eaeafe2d-43e0-4f92-be5c-d62bdfbcb94a
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/b2303c48-3193-44a2-96f9-b8ee28ee7a13>
+  PrefabRemaps:
+    []
+  Name: Eyelid_Top
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -12.493098, y: 0.000000, z: 13.962840}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> d30fb9f4-4ff9-4001-8116-cb73dd124465
+- !<ScriptComponent/b319314f-0c17-4a4d-8a91-a0c126824268>
+  PrefabRemaps:
+    []
+  Name: FaceLandmarksDistanceResponse
+  Enabled: true
+  ScriptAsset: !<reference> bb4cc595-a060-4f26-9eec-69781476833e
+  ScriptInputsDefault:
+    transformMode: true
+    objects: true
+    multiplier: true
+    meshObj: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      distanceScript: !<reference.ScriptComponent> 2dba9dc3-3f32-4665-a973-e002e4b7a088
+      mode: 1
+      transformMode: 0
+      objects: !<reference.SceneObject[]>
+        []
+      multiplier: !<Vec3> {x: 1.000000, y: 1.000000, z: 1.000000}
+      blendshapeObject: !<reference.RenderMeshVisual[]>
+        - !<reference> 562e0587-e167-4bd4-906d-469b7fa873ad
+      blendshapeName: Pose_0
+      invert: true
+      meshObj: !<reference.MaterialMeshVisual[]>
+        []
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/b7795044-331b-4ffa-845e-aae5c77f1352>
+  PrefabRemaps:
+    []
+  Name: PinToFaceLandmarks
+  Enabled: true
+  ScriptAsset: !<reference> fa2f7d72-60b7-45ef-b9dc-c54fcfd4da09
+  ScriptInputsDefault:
+    placementMode: true
+    pointsMode: true
+    positionOffset: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      placementMode: 0
+      pointsMode: 0
+      points: !<int[]>
+        - 36
+        - 37
+        - 38
+        - 39
+        - 40
+        - 41
+      predefinedPoints: 14
+      positionOffset: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      headBinding: !<reference.Head> e09a97e9-379f-41c7-8da4-3e30435e77c1
+  ScriptTypes:
+    "":
+      {}
+- !<RenderMeshVisual/c0e8b730-dffd-4a51-9510-1c64e5d2e180>
+  PrefabRemaps:
+    []
+  Name: component_6
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> c9e36fb8-c7a1-41da-a350-76aa44eb85d5
+  Mesh: !<reference> 724aae55-eda7-43fc-8430-938c007e4303
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ScriptComponent/c13d5412-48ac-4805-8c22-803130a0505b>
+  PrefabRemaps:
+    []
+  Name: FaceLandmarksDistanceResponse
+  Enabled: true
+  ScriptAsset: !<reference> bb4cc595-a060-4f26-9eec-69781476833e
+  ScriptInputsDefault:
+    transformMode: true
+    objects: true
+    multiplier: true
+    meshObj: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      distanceScript: !<reference.ScriptComponent> 2dba9dc3-3f32-4665-a973-e002e4b7a088
+      mode: 1
+      transformMode: 0
+      objects: !<reference.SceneObject[]>
+        []
+      multiplier: !<Vec3> {x: 1.000000, y: 1.000000, z: 1.000000}
+      blendshapeObject: !<reference.RenderMeshVisual[]>
+        - !<reference> d30fb9f4-4ff9-4001-8116-cb73dd124465
+      blendshapeName: Pose_0
+      invert: true
+      meshObj: !<reference.MaterialMeshVisual[]>
+        []
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/c2c7558f-c6c8-48ed-affc-f460b2c445f2>
+  PrefabRemaps:
+    []
+  Name: Right Eyelids Distance
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 4.751186, y: 4.751186, z: 4.751186}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 5f3af91d-abc9-4769-84c3-33a802305a58
+- !<SceneObject/c7b671e1-c842-43fe-98cc-c2746f9aa6ab>
+  PrefabRemaps:
+    []
+  Name: "Pin To Uppder Lip Right [OBJECTS_HERE]"
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 1ad24edc-e8fd-4b2e-af5d-6cf38c75bd5e
+  Components:
+    - !<own> 77b904dd-5718-44a1-82b5-ced410499a13
+- !<SceneObject/d3090037-05ea-4f5d-8e11-a29d8fa0d58f>
+  PrefabRemaps:
+    []
+  Name: Eye
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -12.493098, y: 20.907602, z: -0.586898}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> d5cbb6b3-6971-47b1-9078-8f90fbdccf6d
+    - !<own> 40de14dc-afaf-4f40-bed0-0a2aae463010
+- !<RenderMeshVisual/d30fb9f4-4ff9-4001-8116-cb73dd124465>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 87aa8897-eec8-4489-b543-f0388b0985a2
+  Mesh: !<reference> 2b8c1997-20fa-4296-8b73-093353c8b846
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: true
+  BlendShapes:
+    Pose_0: 1.000000
+- !<SceneObject/d545d927-dcb7-47a5-a2f7-7ce9f283c0d3>
+  PrefabRemaps:
+    []
+  Name: "Pin To Right Pupil [OBJECTS_HERE]"
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 4.751186, y: 4.751186, z: 4.751186}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> d65c740e-f4f2-4cc3-8cf0-f936dd9f253c
+  Components:
+    - !<own> 6538ba99-0aa8-42f1-8849-f97405d50c17
+- !<RenderMeshVisual/d5cbb6b3-6971-47b1-9078-8f90fbdccf6d>
+  PrefabRemaps:
+    []
+  Name: component_5
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> c9e36fb8-c7a1-41da-a350-76aa44eb85d5
+  Mesh: !<reference> b17d3798-44e3-4f05-8807-3748011372ad
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/d65c740e-f4f2-4cc3-8cf0-f936dd9f253c>
+  PrefabRemaps:
+    []
+  Name: Pupil Anchor
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> f30797ad-e717-4323-8090-263ba5cbde55
+  Components:
+    []
+- !<Head/e09a97e9-379f-41c7-8da4-3e30435e77c1>
+  PrefabRemaps:
+    []
+  Name: Head Binding
+  Enabled: true
+  AttachmentPointType: TriangleBarycentric
+  FaceIndex: 0
+  AttachedBarycentricVertex:
+    indices:
+      - 94
+      - 70
+      - 70
+    weights:
+      - 1.000000
+      - 0.000000
+      - 0.000000
+  TrackingScope: !<reference> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/e41bbebb-c519-498c-871c-aca41866e092>
+  PrefabRemaps:
+    []
+  Name: "Pin To Right Eye [OBJECTS_HERE]"
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 4.751186, y: 4.751186, z: 4.751186}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 911ed87c-1f3f-487d-aae3-8e90e65e0b38
+  Components:
+    - !<own> afb911b6-8f3b-4488-921e-33f6b2b02c35
+- !<SceneObject/e4411060-8e63-47b9-988b-4180c7a2d489>
+  PrefabRemaps:
+    []
+  Name: Pupil
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.236558, y: 0.000000, z: 0.002000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.027102, y: 0.027102, z: 0.027102}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 84d5df8c-f2d0-4016-8a9a-09368ad6f4b9
+- !<SceneObject/f0e1deeb-60ca-4199-8064-0128e8942f7d>
+  PrefabRemaps:
+    []
+  Name: "Pin To Left Eye [OBJECTS_HERE]"
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 4.751186, y: 4.751186, z: 4.751186}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 0a7f0b59-6909-48dc-ab8c-79da29610576
+  Components:
+    - !<own> b7795044-331b-4ffa-845e-aae5c77f1352
+- !<SceneObject/f140d17a-e92e-4991-ad6f-d9185fcd2d8c>
+  PrefabRemaps:
+    []
+  Name: Eyelid_Bottom
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -12.493098, y: 0.000000, z: 13.962840}
+    Rotation: {x: 0.000000, y: -0.000000, z: -180.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 562e0587-e167-4bd4-906d-469b7fa873ad
+- !<SceneObject/f30797ad-e717-4323-8090-263ba5cbde55>
+  PrefabRemaps:
+    []
+  Name: Pupil
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.343129, y: 0.000000, z: 0.002000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.027102, y: 0.027102, z: 0.027102}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> c0e8b730-dffd-4a51-9510-1c64e5d2e180
+- !<SceneObject/f5a0d356-841c-48e0-9a2a-2793e9292b5d>
+  PrefabRemaps:
+    []
+  Name: Eye Right
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 3.137980, y: -0.081596, z: 0.024970}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.210474, y: 0.210474, z: 0.210474}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> d545d927-dcb7-47a5-a2f7-7ce9f283c0d3
+    - !<own> e41bbebb-c519-498c-871c-aca41866e092
+    - !<own> c2c7558f-c6c8-48ed-affc-f460b2c445f2
+    - !<own> 94946594-5b41-46c8-98bc-d8cb2d9ee0fb
+  Components:
+    []

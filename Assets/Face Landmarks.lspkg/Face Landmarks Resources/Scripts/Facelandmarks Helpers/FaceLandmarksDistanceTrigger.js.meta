@@ -1,0 +1,70 @@
+- !<AssetImportMetadata/21cce13a-8445-3e17-bd7e-4c189fe9210a>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 0f9cc2d9-46bb-478d-aad5-5e08f49f0ef4
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 0f9cc2d9-46bb-478d-aad5-5e08f49f0ef4
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    AssetLibraryId: 17nZomIXpD6s6t5th8uzZk
+  AssetDataMap:
+    JavaScriptAsset: !<own> 8c03cd97-b498-4cd9-9636-23447f195b5c
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/8c03cd97-b498-4cd9-9636-23447f195b5c>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: d489897b-1949-589b-3bc6-443dbefe823d
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    customTrigger: false
+    firstPoint: false
+    firstPredefinedPoints: false
+    headBinding: false
+    maxTrigger: false
+    maxValue: false
+    minTrigger: false
+    minValue: false
+    pointsMode: false
+    printDistance: false
+    secondPoint: false
+    secondPredefinedPoints: false
+    smoothing: false
+    smoothingAmount: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - pointsMode: 0
+      firstPoint: !<int[]>
+        - 0
+      secondPoint: !<int[]>
+        - 0
+      firstPredefinedPoints: 0
+      secondPredefinedPoints: 0
+      minValue: !<float> 0.000000
+      maxValue: !<float> 0.000000
+      smoothing: false
+      smoothingAmount: !<float> 0.000000
+      printDistance: false
+      customTrigger: false
+      minTrigger: minTrigger
+      maxTrigger: maxTrigger
+      headBinding: !<reference.Head> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
