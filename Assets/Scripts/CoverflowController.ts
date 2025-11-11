@@ -60,6 +60,7 @@ export class PlayMusic extends BaseScriptComponent {
     this._audioComponent = this.getSceneObject().createComponent("Component.AudioComponent") as AudioComponent
     this._audioComponent.setOnFinish((audioComponent)=>{this.stop()})
     this._audioComponent.playbackMode = Audio.PlaybackMode.LowLatency
+    this.updateCoverFlow();
   }
 
   updateCoverFlow() {

@@ -411,7 +411,7 @@
       PlayMaterial: !<reference.Material> 50b974a8-1979-4305-b816-5c30a4826c5c
       PauseMaterial: !<reference.Material> b7100bd0-830d-49ad-bd25-eb0ed88c2bba
       PlayPauseImageButton: !<reference.Image> 707ab02e-ba6e-4191-b30b-05a92dd2914b
-      StopButton: !<reference.SceneObject> f696078a-51d4-4fe6-b80f-ce3837b6811e
+      StopButton: !<reference.SceneObject> 9a38f28e-4b0b-435b-971e-0c20b3138223
       coverImage: !<reference.Image> b5862e59-dc12-439b-86fc-8c72671ba0b4
       coverTitle: !<reference.Text> 883e861a-667f-447d-9279-154d1b0c0888
       _audioTrackAsset: !<reference.AudioTrackAsset> 6058c80b-062e-49a5-88d6-0b8799ddd91f
@@ -1455,43 +1455,6 @@
     - !<own> c2aaef87-c480-4d67-815b-84d48fd6c6a0
   Components:
     []
-- !<ScriptComponent/79bfbd3c-193b-41c7-8e26-dd768a222373>
-  PrefabRemaps:
-    []
-  Name: Headlock
-  Enabled: false
-  ScriptAsset: !<reference> 2a92f85a-a814-4f5d-bd73-4a2710147d01
-  ScriptInputsDefault:
-    _xzEnabled: true
-    _yEnabled: true
-    _lockedPitch: true
-    _pitchOffsetDegrees: true
-    _pitchBufferDegrees: true
-    _lockedYaw: true
-    _yawEasing: true
-    _yawOffsetDegrees: true
-    _yawBufferDegrees: true
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      _distance: !<float> 80.000000
-      _xzEnabled: true
-      _xzEasing: 0.100000
-      _yEnabled: true
-      _yEasing: 0.100000
-      _translationBuffer: !<float> 10.000000
-      _lockedPitch: true
-      _pitchEasing: 0.100000
-      _pitchOffsetDegrees: !<float> 0.000000
-      _pitchBufferDegrees: !<float> 0.000000
-      _lockedYaw: true
-      _yawEasing: !<float> 1.000000
-      _yawOffsetDegrees: !<float> 0.000000
-      _yawBufferDegrees: !<float> 0.000000
-  ScriptTypes:
-    "":
-      {}
 - !<SceneObject/7c6dec6b-d4f8-4de9-8393-fc84bb9c59a6>
   PrefabRemaps:
     []
@@ -1529,12 +1492,13 @@
   Enabled: true
   ScriptAsset: !<reference> c281b399-2fd9-4263-a0fc-d1f5229ce559
   ScriptInputsDefault:
+    title: true
     cover: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      title: Light int the Night
+      title: Light in the Night
       cover: !<reference.Material> 7c7114cd-d306-4a2f-949e-6e4039e7b4a5
   ScriptTypes:
     "":
@@ -1575,10 +1539,10 @@
     TextureStretch: FitWidth
   BlendMode: PremultipliedAlphaAuto
   Outline: !<OutlineSettings>
-    Enabled: false
+    Enabled: true
     Fill: !<TextFill>
       Mode: Solid
-      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Color: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
       Texture: !<reference> 00000000-0000-0000-0000-000000000000
       ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
       TileCount: 5.000000
@@ -1656,7 +1620,7 @@
     - !<own> 9a38f28e-4b0b-435b-971e-0c20b3138223
     - !<own> 6bebfd3e-f61b-4199-834a-0d7df501bbd2
   Components:
-    - !<own> 79bfbd3c-193b-41c7-8e26-dd768a222373
+    []
 - !<SceneObject/83e05ac8-2b01-40a4-958a-b6b5552ca97c>
   PrefabRemaps:
     []
@@ -1664,7 +1628,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: -1.000000, z: 2.000000}
+    Position: {x: 0.000000, y: -1.566323, z: 2.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
