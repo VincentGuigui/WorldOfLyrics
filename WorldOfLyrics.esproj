@@ -15,14 +15,14 @@ metaInfo:
     []
   lensName: World Of Lyrics
   lensDescriptors:
-    - GEN_AI_ICON
+    []
   lensApplicability:
     - Front
     - Back
   lensClientCompatibilities:
     - Spectacles
   platformBundlesEnabled: false
-  iconHash: 739b4119e0704ed83f07885838110736
+  iconHash: 85cd4c35bcb64cf6a3197e23a71bcdcd
   videoPreviewHash: ""
   fromTemplateName: Default
   fromTemplateUrl: Lens Studio 5.12.0.25072205
