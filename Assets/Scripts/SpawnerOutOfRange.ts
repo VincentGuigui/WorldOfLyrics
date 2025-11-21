@@ -49,13 +49,12 @@ export class SpawnerOutOfRange extends BaseScriptComponent {
         var currentDistance = thisPosition.distance(targetPosition);
 
         if (currentDistance > this.distanceThreshold) {
-            var targetRotation = this.target.getTransform().getWorldRotation().toEulerAngles()
-            this.debug("rot:" + targetRotation.x * MathUtils.RadToDeg + ", " + targetRotation.y * MathUtils.RadToDeg + ", " + targetRotation.z * MathUtils.RadToDeg + ", ")
+            var targetRotation = this.target.getTransform().getWorldRotation()
+            this.debug("" + targetRotation.y + " " + targetRotation.y * MathUtils.RadToDeg)
 
             var yaw = targetRotation.y;
             var pitch = 0 // horizon, if it was relative to pov, we would have used targetRotation.x;
-            this.debug("yaw:" + yaw + " pitch:" + pitch)
-            const finalYaw = (MathUtils.DegToRad * -90) - (
+            const finalYaw = (
                 !this.changeYaw
                     ? yaw
                     : yaw + (MathUtils.randomRange(this.yawRange.x, this.yawRange.y) * MathUtils.DegToRad)
@@ -65,15 +64,17 @@ export class SpawnerOutOfRange extends BaseScriptComponent {
                     ? pitch
                     : (MathUtils.randomRange(this.pitchRange.x, this.pitchRange.y) * MathUtils.DegToRad)
 
+            this.debug("yaw:" + yaw * MathUtils.RadToDeg + "=>" + finalYaw * MathUtils.RadToDeg)
+            this.debug("pitch:" + pitch * MathUtils.RadToDeg + "=>" + finalPitch * MathUtils.RadToDeg)
             const distance =
                 !this.changeDistance
                     ? currentDistance
                     : (MathUtils.randomRange(this.distanceRange.x, this.distanceRange.y))
-            this.debug("y:" + yaw + " p" + pitch + " d" + distance)
+            const correctYaw = (MathUtils.DegToRad * -90) - finalYaw
             const dir = new vec3(
-                Math.cos(finalPitch) * Math.cos(finalYaw),
+                Math.cos(finalPitch) * Math.cos(correctYaw),
                 Math.sin(finalPitch),
-                Math.cos(finalPitch) * Math.sin(finalYaw),
+                Math.cos(finalPitch) * Math.sin(correctYaw),
             ).normalize();
 
             var respawnPosition = targetPosition.add(dir.mult(new vec3(distance, distance, distance)));

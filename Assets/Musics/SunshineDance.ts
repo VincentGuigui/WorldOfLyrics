@@ -126,7 +126,7 @@ export class SongAndLyrics extends Song {
             },
             {
                 "begin": 73.988713988714,
-                "content": "guides my feet, I let ça decide.",
+                "content": "guides my feet, I let it decide.",
                 "end": 77.623997623998
             },
             {
@@ -201,7 +201,7 @@ export class SongAndLyrics extends Song {
             },
             {
                 "begin": 110.060885060885,
-                "content": "Twist et turning,",
+                "content": "Twist and turning,",
                 "end": 112.266112266112
             },
             {

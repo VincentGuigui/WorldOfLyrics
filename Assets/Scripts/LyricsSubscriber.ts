@@ -1,16 +1,18 @@
 import { LyricsData } from './LyricsData'
+import { LYRICS_STOP, LYRICS_STOP_DIRTY, LYRICS_WAITING, LYRICS_PAUSE  } from './LyricsStates'
 
 @component
 export class LyricsSubscriber extends BaseScriptComponent {
 
     @input
     lyricsOffset: 0
-
+ 
     onAwake() {
 
     }
 
     setLyrics(lyrics: LyricsData, current: number, template: Text) {
+        if (current == LYRICS_PAUSE) return
         var lyric = this.findLyric(lyrics, current);
         // Check for Text (2D) component
         var text2D = this.sceneObject.getComponent("Component.Text") as Text;
@@ -25,8 +27,9 @@ export class LyricsSubscriber extends BaseScriptComponent {
         }
     }
 
-    private findLyric(lyrics: LyricsData, current: number): string {
-        if (lyrics == null) return ""
+    protected findLyric(lyrics: LyricsData, current: number): string {
+        if (lyrics == null || current == LYRICS_STOP) return ""
+        if (current == LYRICS_WAITING) return "..."
         current = current + this.lyricsOffset
         if (this.lyricsOffset < 0 && current < 0)
             return ""

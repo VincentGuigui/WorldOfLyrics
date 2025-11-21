@@ -4,6 +4,7 @@ import { HandType } from "SpectaclesInteractionKit.lspkg/Providers/HandInputData
 import { LandmarkName } from "SpectaclesInteractionKit.lspkg/Providers/HandInputData/LandmarkNames";
 import TrackedHand from "SpectaclesInteractionKit.lspkg/Providers/HandInputData/TrackedHand"
 import WorldCameraFinderProvider from "SpectaclesInteractionKit.lspkg/Providers/CameraProvider/WorldCameraFinderProvider"
+import { Headlock } from "SpectaclesInteractionKit.lspkg/Components/Interaction/Headlock/Headlock";
 
 const HandTypeBoth: string = "both"
 const HandTypeLeft: string = "left"
@@ -59,6 +60,7 @@ export class HandFollower extends BaseScriptComponent {
     trackedLandmark: string = "palmCenter"
 
     @input viewInEditor: boolean = false
+    @input fixedInEditor: boolean = false
 
     private handProvider: HandInputData = HandInputData.getInstance()
     private leftHand = this.handProvider.getHand("left" as HandType);
@@ -82,14 +84,22 @@ export class HandFollower extends BaseScriptComponent {
 
     update() {
         if (global.deviceInfoSystem.isEditor() && !this.viewInEditor) return;
-        if (this.tryShowHandMenu(this.leftHand) || this.tryShowHandMenu(this.rightHand)) {
-            this.handFollowObject.enabled = true;
-            this.noTrackCount = 0;
+        if (global.deviceInfoSystem.isEditor() && this.fixedInEditor) {
+            this.sceneObject.getComponents("Component").forEach(component => {
+                if (component instanceof Headlock)
+                    component.enabled = true
+            });
         }
         else {
-            this.noTrackCount++;
-            if (this.noTrackCount > 10) {
-                this.handFollowObject.enabled = false;
+            if (this.tryShowHandMenu(this.leftHand) || this.tryShowHandMenu(this.rightHand)) {
+                this.handFollowObject.enabled = true;
+                this.noTrackCount = 0;
+            }
+            else {
+                this.noTrackCount++;
+                if (this.noTrackCount > 10) {
+                    this.handFollowObject.enabled = false;
+                }
             }
         }
     }

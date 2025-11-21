@@ -46,7 +46,7 @@ export class CoverflowController extends BaseScriptComponent {
   }
 
   onStart() {
-    this._audioComponent.setOnFinish((audioComponent)=>{this.stop()})
+    this._audioComponent.setOnFinish((audioComponent) => { this.stop() })
     this._audioComponent.playbackMode = Audio.PlaybackMode.LowLatency
     this.updateCoverFlow();
   }
@@ -58,7 +58,7 @@ export class CoverflowController extends BaseScriptComponent {
     this.coverImage.mainMaterial = this.SongsObject.Songs[this.CurrentSong].cover
     this.LyricsReader.setSong(this.SongsObject.Songs[sunshineDanceIndex])
     if (this._audioComponent !== undefined) {
-      var track:AudioTrackAsset = this.SongsObject.Songs[sunshineDanceIndex].track
+      var track: AudioTrackAsset = this.SongsObject.Songs[sunshineDanceIndex].track
       this._audioComponent.audioTrack = track as AudioTrackAsset
     }
   }
@@ -94,7 +94,7 @@ export class CoverflowController extends BaseScriptComponent {
       if (this._state == "paused") {
         this._audioComponent.resume()
       }
-      this.LyricsReader.start()
+      this.LyricsReader.play()
       this._state = "playing"
       this.StopButton.enabled = true
     }
