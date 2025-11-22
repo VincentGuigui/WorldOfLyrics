@@ -2,9 +2,10 @@ import WorldCameraFinderProvider from 'SpectaclesInteractionKit.lspkg/Providers/
 import { LyricsData } from './LyricsData'
 import { LyricsSubscriber } from './LyricsSubscriber'
 import { Song } from './Song'
-import { findAllScriptComponentsInChildren, findScriptComponentInChildren } from "SpectaclesInteractionKit.lspkg/Utils/SceneObjectUtils"
+import { findAllScriptComponentsInChildren, findScriptComponentInChildren, findScriptComponentInSelfOrParents } from "SpectaclesInteractionKit.lspkg/Utils/SceneObjectUtils"
 import { LyricsDistributor } from './LyricsDistributor'
-import { LYRICS_STOP, LYRICS_STOP_DIRTY, LYRICS_WAITING, LYRICS_PAUSE  } from './LyricsStates'
+import { LYRICS_STOP, LYRICS_STOP_DIRTY, LYRICS_WAITING, LYRICS_PAUSE } from './LyricsStates'
+import { FloorHitTest } from './FloorHitTest'
 
 @component
 export class LyricsReader extends BaseScriptComponent {
@@ -28,7 +29,7 @@ export class LyricsReader extends BaseScriptComponent {
     private Sky: SceneObject = undefined
 
     private _camera = WorldCameraFinderProvider.getInstance();
- 
+
     @input
     lyricsLocations: SceneObject[]
     private _lyricsSubscribers: LyricsSubscriber[] = []
@@ -38,13 +39,13 @@ export class LyricsReader extends BaseScriptComponent {
     private _currentLine = LYRICS_STOP_DIRTY
     private _headAlreadyVisible = false
     private _state = "stopped";
+    private _floorDistributor: LyricsDistributor
 
     onAwake() {
         this.registerSubscribers();
         this.textTemplate = this.sceneObject.getComponent("Component.Text")
-        this.createEvent("UpdateEvent").bind(() => {
-            this.update();
-        })
+        this._floorDistributor = findScriptComponentInChildren(this.Floor, LyricsDistributor)
+        this.createEvent("UpdateEvent").bind(() => {this.onUpdate()})
     }
 
     setSong(song: Song) {
@@ -61,7 +62,7 @@ export class LyricsReader extends BaseScriptComponent {
         })
     }
 
-    update() {
+    onUpdate() {
         var headIsVisible = this.Head.isEnabledInHierarchy
         if (!headIsVisible) {
             this._headAlreadyVisible = false
@@ -76,13 +77,22 @@ export class LyricsReader extends BaseScriptComponent {
         this.Hand.enabled = !headIsVisible;
 
         // display floor if look at the floor
-        if (/*!this.Floor.enabled && */this._camera.back().angleTo(vec3.down()) < 35 * MathUtils.DegToRad) {
-            this.Floor.enabled = true;
-            var distributor = this.Floor.getComponent("ScriptComponent") as LyricsDistributor
-            distributor.setLyricsOnce(this._lyrics, this.getLyricsIndex(), this.textTemplate)
+        if (this._camera.back().angleTo(vec3.down()) < 35 * MathUtils.DegToRad) {
+            this.Floor.enabled = true
+        } else {
+            // if camera lookat is leaving the floor and DanceStep not visible anymore
+            if (!this._floorDistributor.isEnabledInHierarchy)
+                this.Floor.enabled = false;
         }
+
+        // target has been placed
+        if (this._floorDistributor.isEnabledInHierarchy) {
+            this._floorDistributor.setLyricsOnce(this._lyrics, this.getLyricsIndex(), this.textTemplate)
+        }
+
         if (this._state == "playing") {
             this.propagateLyrics(this.getLyricsIndex())
+
         } else if (this._state == "paused") {
             this.propagateLyrics(LYRICS_PAUSE)
         } else if (this._state == "stopped") {
@@ -91,6 +101,7 @@ export class LyricsReader extends BaseScriptComponent {
     }
 
     getLyricsIndex() {
+        if (this._state == "stopped") return LYRICS_STOP
         this._currentPosition = getTime() - this._startTime
         if (this._currentPosition < this._lyrics.timed.line[0].begin)
             return LYRICS_WAITING
@@ -141,6 +152,6 @@ export class LyricsReader extends BaseScriptComponent {
         this.Singing.enabled = false
         this.Thinking.enabled = false
         this.Hand.enabled = false
-       //this.Floor.enabled = false
+        this.Floor.enabled = false
     }
 }

@@ -26,9 +26,7 @@
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
-    filterEnabled: false
-    indexToSpawn: false
-    objectsToSpawn: false
+    placeholder: false
     targetObject: false
   ScriptTypesHidden:
     {}
@@ -39,16 +37,11 @@
   Attachments:
     []
   DefaultScriptInputs:
-    - indexToSpawn: !<float> 0.000000
-      targetObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      objectsToSpawn: !<reference.SceneObject[]>
-        []
-      filterEnabled: false
+    - targetObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      placeholder: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
-    - // @input float indexToSpawn
     - // @input SceneObject targetObject
-    - "// @input SceneObject[] objectsToSpawn"
-    - // @input bool filterEnabled
+    - // @input SceneObject placeholder

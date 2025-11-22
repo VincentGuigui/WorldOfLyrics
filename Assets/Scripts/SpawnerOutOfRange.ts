@@ -50,7 +50,7 @@ export class SpawnerOutOfRange extends BaseScriptComponent {
 
         if (currentDistance > this.distanceThreshold) {
             var targetRotation = this.target.getTransform().getWorldRotation()
-            this.debug("" + targetRotation.y + " " + targetRotation.y * MathUtils.RadToDeg)
+            // this.debug("" + targetRotation.y + " " + targetRotation.y * MathUtils.RadToDeg)
 
             var yaw = targetRotation.y;
             var pitch = 0 // horizon, if it was relative to pov, we would have used targetRotation.x;
@@ -64,8 +64,8 @@ export class SpawnerOutOfRange extends BaseScriptComponent {
                     ? pitch
                     : (MathUtils.randomRange(this.pitchRange.x, this.pitchRange.y) * MathUtils.DegToRad)
 
-            this.debug("yaw:" + yaw * MathUtils.RadToDeg + "=>" + finalYaw * MathUtils.RadToDeg)
-            this.debug("pitch:" + pitch * MathUtils.RadToDeg + "=>" + finalPitch * MathUtils.RadToDeg)
+            // this.debug("yaw:" + yaw * MathUtils.RadToDeg + "=>" + finalYaw * MathUtils.RadToDeg)
+            // this.debug("pitch:" + pitch * MathUtils.RadToDeg + "=>" + finalPitch * MathUtils.RadToDeg)
             const distance =
                 !this.changeDistance
                     ? currentDistance
