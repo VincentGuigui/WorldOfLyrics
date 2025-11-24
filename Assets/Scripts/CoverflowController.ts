@@ -39,10 +39,7 @@ export class CoverflowController extends BaseScriptComponent {
   private _state = "stopped";
 
   onAwake() {
-    this.createEvent('OnStartEvent').bind(() => {
-      this.onStart();
-    });
-
+    this.createEvent("OnStartEvent").bind(() => { this.onStart() })
   }
 
   onStart() {

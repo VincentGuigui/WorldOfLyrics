@@ -8,21 +8,21 @@ import Easing from 'LSTween.lspkg/TweenJS/Easing'
 
 @component
 export class LyricsDistributor extends LyricsSubscriber {
-
     @input
     lyricsOffset: 0
     @input
     parentObject: SceneObject
-
     alreadySet = false
-
-    _lyricsText: Text[] = []
-    private _camera = WorldCameraFinderProvider.getInstance();
+    lyricsText: Text[] = []
 
     onAwake() {
+        this.createEvent("OnStartEvent").bind(this.onStart.bind(this))
+    }
+
+    onStart() {
         var texts = findAllComponentsInChildren(this.sceneObject, "Component.Text")
         texts.forEach(text => {
-            this._lyricsText.push(text as Text)
+            this.lyricsText.push(text as Text)
         });
 
     }
@@ -35,35 +35,38 @@ export class LyricsDistributor extends LyricsSubscriber {
         if (this.alreadySet) {
             return
         }
-        console.log("lyrics ", current)
         this.alreadySet = true
         var wordsToDistribute: string[] = []
         if (current == LYRICS_STOP || current == LYRICS_WAITING) {
-            for (let i = 0; i < this._lyricsText.length; i++) {
+            for (let i = 0; i < this.lyricsText.length; i++) {
                 wordsToDistribute.push("")
             }
         }
         else {
-            while (wordsToDistribute.length < this._lyricsText.length) {
+            while (wordsToDistribute.length < this.lyricsText.length) {
                 var lyric = this.findLyric(lyrics, current);
                 if (lyric == "") {
-                    for (let i = wordsToDistribute.length; i < this._lyricsText.length; i++) {
+                    for (let i = wordsToDistribute.length; i < this.lyricsText.length; i++) {
                         wordsToDistribute.push('')
                     }
                     break;
                 }
                 var words = lyric.split(' ')
                 words.forEach(word => {
-                    if (wordsToDistribute.length < this._lyricsText.length)
+                    if (wordsToDistribute.length < this.lyricsText.length)
                         wordsToDistribute.push(word)
                 });
                 current++
             }
         }
-        for (let i = 0; i < this._lyricsText.length; i++) {
-            this._lyricsText[i].textFill = template.textFill
-            this._lyricsText[i].text = wordsToDistribute[i];
+        for (let i = 0; i < this.lyricsText.length; i++) {
+            this.lyricsText[i].textFill = template.textFill
+            this.lyricsText[i].text = wordsToDistribute[i];
         }
+    }
+
+    override setEnable(enable:boolean) {
+        super.setEnable(true)
         var i = 0
         var danceDuration = 8000
         var transitionDuration = 2000
@@ -75,7 +78,7 @@ export class LyricsDistributor extends LyricsSubscriber {
                 .start().onComplete(() => {
                     LSTween.moveOffset(element.getTransform(), new vec3(0, 0, -0.6), stepDuration)
                         .delay(danceDuration)
-                        .easing(Easing.Elastic.In)
+                        .easing(Easing.Elastic.In) 
                         .start()
                 })
             i++

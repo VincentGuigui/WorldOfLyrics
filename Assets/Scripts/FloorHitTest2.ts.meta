@@ -1,20 +1,20 @@
-- !<AssetImportMetadata/5c96b166-2760-4760-bad7-97a6d6190982>
+- !<AssetImportMetadata/415638bb-4dee-4441-b9b4-1981ad3a01b1>
   ImportedAssetIds:
-    TypeScriptAsset: !<reference> 8d123bf0-aa91-464b-a9f6-9f186a3df634
+    TypeScriptAsset: !<reference> fdcc72dc-80fe-480f-bc67-f8ea259c5838
   ImporterName: TypeScriptAssetImporter
-  PrimaryAsset: !<reference> 8d123bf0-aa91-464b-a9f6-9f186a3df634
+  PrimaryAsset: !<reference> fdcc72dc-80fe-480f-bc67-f8ea259c5838
   PackageType: NotAPackage
   LegacyPackagePolicy: ~
   ExtraData:
     {}
   AssetDataMap:
-    TypeScriptAsset: !<own> c94b50b0-6cf3-48d1-8789-a7c465629e0d
+    TypeScriptAsset: !<own> 68917dd3-276a-4b6a-a6da-fa415ccc0b17
   DependentFiles:
     []
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<TypeScriptAssetData/c94b50b0-6cf3-48d1-8789-a7c465629e0d>
+- !<TypeScriptAssetData/68917dd3-276a-4b6a-a6da-fa415ccc0b17>
   SvgIcon: ""
   SetupScript:
     code: ""
@@ -22,14 +22,12 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 19a7f3dd-960a-4fb9-8305-ecd2d9a6b21c
+  ComponentUid: 881d6846-03b7-4533-b5a4-62f1ff79ac98
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
-    notified: false
     placeholder: false
     targetObject: false
-    worldHitTest: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -39,15 +37,11 @@
   Attachments:
     []
   DefaultScriptInputs:
-    - worldHitTest: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
-      targetObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+    - targetObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       placeholder: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      notified: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
-    - // @input AssignableType worldHitTest
     - // @input SceneObject targetObject
     - // @input SceneObject placeholder
-    - // @input AssignableType_1 notified

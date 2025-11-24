@@ -29,6 +29,7 @@
     Floor: false
     Hand: false
     Head: false
+    Sidewalk: false
     Signage: false
     Singing: false
     Sky: false
@@ -50,6 +51,7 @@
       Thinking: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       Singing: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       Floor: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      Sidewalk: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       Wall: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       Signage: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       Sky: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
@@ -64,6 +66,7 @@
     - // @input SceneObject Thinking
     - // @input SceneObject Singing
     - // @input SceneObject Floor
+    - // @input SceneObject Sidewalk
     - // @input SceneObject Wall
     - // @input SceneObject Signage
     - // @input SceneObject Sky

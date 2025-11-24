@@ -1,12 +1,12 @@
 import { LyricsData } from './LyricsData'
-import { LYRICS_STOP, LYRICS_STOP_DIRTY, LYRICS_WAITING, LYRICS_PAUSE  } from './LyricsStates'
+import { LYRICS_STOP, LYRICS_STOP_DIRTY, LYRICS_WAITING, LYRICS_PAUSE } from './LyricsStates'
 
 @component
 export class LyricsSubscriber extends BaseScriptComponent {
 
     @input
     lyricsOffset: 0
- 
+
     onAwake() {
 
     }
@@ -40,4 +40,7 @@ export class LyricsSubscriber extends BaseScriptComponent {
         return lyrics.timed.line[current].content
     }
 
+    setEnable(enable: boolean = true) {
+        this.sceneObject.enabled = enable
+    }
 }

@@ -22,6 +22,8 @@ export class LyricsReader extends BaseScriptComponent {
     @input
     private Floor: SceneObject = undefined
     @input
+    private Sidewalk: SceneObject = undefined
+    @input
     private Wall: SceneObject = undefined
     @input
     private Signage: SceneObject = undefined
@@ -42,10 +44,14 @@ export class LyricsReader extends BaseScriptComponent {
     private _floorDistributor: LyricsDistributor
 
     onAwake() {
-        this.registerSubscribers();
         this.textTemplate = this.sceneObject.getComponent("Component.Text")
-        this._floorDistributor = findScriptComponentInChildren(this.Floor, LyricsDistributor)
-        this.createEvent("UpdateEvent").bind(() => {this.onUpdate()})
+        this.createEvent("OnStartEvent").bind(() => { this.onStart() })
+        this.createEvent("UpdateEvent").bind(() => { this.onUpdate() })
+    }
+
+    onStart() {
+        this.registerSubscribers();
+        this._floorDistributor = findScriptComponentInChildren(this.Floor, LyricsDistributor, 50)
     }
 
     setSong(song: Song) {
@@ -57,12 +63,15 @@ export class LyricsReader extends BaseScriptComponent {
         this.lyricsLocations.forEach(location => {
             var subs = findAllScriptComponentsInChildren(location, LyricsSubscriber)
             subs.forEach(sub => {
+                console.log("Register LyricsSub", sub.getSceneObject().name)
                 this._lyricsSubscribers.push(sub)
             });
         })
     }
 
     onUpdate() {
+
+        // HEAD
         var headIsVisible = this.Head.isEnabledInHierarchy
         if (!headIsVisible) {
             this._headAlreadyVisible = false
@@ -73,23 +82,48 @@ export class LyricsReader extends BaseScriptComponent {
             this.Singing.enabled = split
             this.Thinking.enabled = !split
         }
+
+        // HAND
         // display Hand if no Head visible
         this.Hand.enabled = !headIsVisible;
 
+        var cameraLookAt = this._camera.back()
+
+        // FLOOR DANCE STEPS
         // display floor if look at the floor
-        if (this._camera.back().angleTo(vec3.down()) < 35 * MathUtils.DegToRad) {
+        if (cameraLookAt.angleTo(vec3.down()) < 35 * MathUtils.DegToRad) {
             this.Floor.enabled = true
+            // children will spawn using WorldQueryHitTest
         } else {
             // if camera lookat is leaving the floor and DanceStep not visible anymore
             if (!this._floorDistributor.isEnabledInHierarchy)
                 this.Floor.enabled = false;
         }
 
-        // target has been placed
+        // Floor steps has been placed
         if (this._floorDistributor.isEnabledInHierarchy) {
             this._floorDistributor.setLyricsOnce(this._lyrics, this.getLyricsIndex(), this.textTemplate)
         }
 
+        // SIDEWALK
+        console.log("spawn rabbit ?", cameraLookAt.angleTo(vec3.down())*MathUtils.RadToDeg, cameraLookAt.angleTo(vec3.right())*MathUtils.RadToDeg)
+        if (cameraLookAt.angleTo(vec3.down()) > 40 * MathUtils.DegToRad
+            && cameraLookAt.angleTo(vec3.down()) < 50 * MathUtils.DegToRad
+            && cameraLookAt.angleTo(vec3.right()) > 30 * MathUtils.DegToRad
+            && cameraLookAt.angleTo(vec3.right()) < 40 * MathUtils.DegToRad) {
+            console.log("Spawn Rabbit")
+            this.Sidewalk.enabled = true
+            // children will spawn using WorldQueryHitTest
+        }
+        if (this.Sidewalk.enabled) {
+            if (!this._camera.getComponent().isSphereVisible(this.Sidewalk.children[0].getTransform().getWorldPosition().add(vec3.up().uniformScale(50)), 150)) {
+                console.log("Unspawn Rabbit")
+                this.Sidewalk.children[0].enabled = false
+                this.Sidewalk.enabled = false
+            }
+        }
+
+        // PROPAGATION
         if (this._state == "playing") {
             this.propagateLyrics(this.getLyricsIndex())
 
