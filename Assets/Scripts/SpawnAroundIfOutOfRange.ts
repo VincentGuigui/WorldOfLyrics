@@ -28,8 +28,7 @@ export default class SpawnAroundIfOutOfRange extends SpawnerOutOfRange {
   @allowUndefined
   headlock: Headlock
   @input
-  @allowUndefined
-  Billboard: Billboard
+  billboard: boolean = false
   @input
   spawnOnLateUpdate: boolean = true
   @input
@@ -83,17 +82,12 @@ export default class SpawnAroundIfOutOfRange extends SpawnerOutOfRange {
       // null as handled by headlock
       return new SpawnTransform(null, null)
     }
-    if (this.Billboard)
-      this.Billboard.enabled = true
     return super.computeSpawnTransformation()
   }
 
   computeSpawnTransformationJIT(tr: SpawnTransform) {
-      if (this.Billboard){
-      this.Billboard.snapToOffsetRotation()
-      this.Billboard.enabled = false
-    }
-    
+
+
     var trHeadlock = this.headlock.sceneObject.getTransform()
     tr.position = trHeadlock.getWorldPosition()
     if (this.fixedY)
@@ -110,7 +104,16 @@ export default class SpawnAroundIfOutOfRange extends SpawnerOutOfRange {
       direction = direction.normalize()
       tr.position.y = refPos.add(direction.uniformScale(distance)).y
     }
-    tr.rotation = trHeadlock.getWorldRotation()
+    if (this.billboard) {
+      var flatRefPos = this.referenceObject.getTransform().getWorldPosition()
+      flatRefPos.y = 0
+      var flatPos = new vec3(tr.position.x, 0, tr.position.z)
+      var rot = quat.rotationFromTo(vec3.forward(), flatRefPos.sub(flatPos))
+      tr.rotation = rot
+    }
+    else {
+      tr.rotation = trHeadlock.getWorldRotation()
+    }
     return tr
   }
 

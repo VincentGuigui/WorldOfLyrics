@@ -341,12 +341,13 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Position: {x: 0.000000, y: -50.000000, z: 0.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
-    - !<own> d4c591fc-6fef-401f-b91a-d99f4a86e5ac
+    - !<own> 0a0b2d30-e06d-4190-815f-5b65d4fa4394
+    - !<own> c532ae0a-2f23-4de6-bf1a-4f38c720b524
   Components:
     []
 - !<ScriptComponent/083dced5-cf91-4933-91f7-990b08232341>
@@ -389,6 +390,21 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/0880cce0-2209-49a1-996a-c983cfddc158>
+  PrefabRemaps:
+    []
+  Name: TreeVerticalPivot
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 5223817e-3151-4c83-8dd5-637bb7cfb674
+  Components:
+    []
 - !<Image/08a6afc4-e5bb-41b7-9d04-e9cae82b8f2d>
   PrefabRemaps:
     []
@@ -427,10 +443,10 @@
   PrefabRemaps:
     []
   Name: Rabbit
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 25.223083, y: 7.283201, z: -1.247800}
+    Position: {x: 23.227713, y: 7.283201, z: 13.370941}
     Rotation: {x: 0.000000, y: 27.312643, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
@@ -1096,7 +1112,7 @@
     {}
   ScriptInputs:
     "":
-      objectToPlace: !<reference.SceneObject> 5223817e-3151-4c83-8dd5-637bb7cfb674
+      objectToPlace: !<reference.SceneObject> 0880cce0-2209-49a1-996a-c983cfddc158
       hideWhenNotPlaced: true
       worldHitTest: !<MappingBased.AssignableType> a2937cb2-605e-4c2f-9637-ee18299058ec
   ScriptTypes:
@@ -2648,7 +2664,7 @@
     changeYaw: true
     fixedY: true
     changePitch: true
-    Billboard: true
+    billboard: true
     spawnOnLateUpdate: true
     respawnOnlyIfNotInFov: true
   ScriptTypesDefault:
@@ -2670,7 +2686,7 @@
       pitchRelativeToInitial: true
       pitchRange: !<Vec2> {x: 25.000000, y: 35.000000}
       headlock: !<MappingBased.AssignableType> d5f939c7-ea34-4d83-b2c3-2630302e316b
-      Billboard: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      billboard: false
       spawnOnLateUpdate: false
       respawnOnlyIfNotInFov: false
   ScriptTypes:
@@ -3023,21 +3039,6 @@
     - !<own> 322a3fd4-d2e3-41e5-a297-90e827c1c803
   Components:
     - !<own> 08a6afc4-e5bb-41b7-9d04-e9cae82b8f2d
-- !<SceneObject/4dbcfb88-562f-426b-b932-60e67f0ba1bd>
-  PrefabRemaps:
-    []
-  Name: Billboard
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> c698b034-d657-4a6a-8a77-16bcd47d3c97
 - !<ScriptComponent/4e5f4cde-5878-479e-bbc6-1cf41fa67d13>
   PrefabRemaps:
     []
@@ -3169,14 +3170,13 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: -400.000000}
+    Position: {x: 0.000000, y: 50.000000, z: -400.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
     - !<own> 06630416-69d9-4109-a8b9-9ddc75f673a7
     - !<own> f9dcf0d3-ad1c-49eb-bdbb-01ae25a06011
-    - !<own> 4dbcfb88-562f-426b-b932-60e67f0ba1bd
   Components:
     - !<own> fc337fa8-8164-4ba3-a0b6-9d76915d5de4
 - !<SceneObject/5270863e-2b74-4f4f-bad9-3f940ee1aec2>
@@ -4160,7 +4160,7 @@
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
-    - !<own> 5223817e-3151-4c83-8dd5-637bb7cfb674
+    - !<own> 0880cce0-2209-49a1-996a-c983cfddc158
   Components:
     - !<own> 1b5fb688-28bb-4da0-8d83-c2393f638b6f
 - !<SceneObject/72a9256d-6cb1-4b31-8db1-dd937b1052e9>
@@ -7285,7 +7285,7 @@
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 67.514374, z: 0.000000}
+    Rotation: {x: 0.000000, y: 67.514359, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
@@ -7308,58 +7308,6 @@
     - !<own> e9156463-233e-4a1f-95e0-16fca95fbdc6
   Components:
     []
-- !<ScriptComponent/c698b034-d657-4a6a-8a77-16bcd47d3c97>
-  PrefabRemaps:
-    []
-  Name: Billboard
-  Enabled: true
-  ScriptAsset: !<reference> 74eafc23-e98b-4073-ab18-82ca532994e3
-  ScriptInputsDefault:
-    _xAxisEnabled: true
-    _yAxisEnabled: true
-    _zAxisEnabled: true
-    _axisBufferDegrees: true
-    _axisEasing: true
-    duration: true
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      _xAxisEnabled: false
-      _yAxisEnabled: true
-      _zAxisEnabled: false
-      _axisBufferDegrees: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
-      _axisEasing: !<Vec3> {x: 1.000000, y: 1.000000, z: 1.000000}
-      duration: 0.033000
-  ScriptTypes:
-    "":
-      {}
-- !<ScriptComponent/c6e630af-927a-4f3a-8672-016cd2ba4294>
-  PrefabRemaps:
-    []
-  Name: Billboard
-  Enabled: true
-  ScriptAsset: !<reference> 74eafc23-e98b-4073-ab18-82ca532994e3
-  ScriptInputsDefault:
-    _xAxisEnabled: true
-    _yAxisEnabled: true
-    _zAxisEnabled: true
-    _axisBufferDegrees: true
-    _axisEasing: true
-    duration: true
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      _xAxisEnabled: false
-      _yAxisEnabled: true
-      _zAxisEnabled: false
-      _axisBufferDegrees: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
-      _axisEasing: !<Vec3> {x: 1.000000, y: 1.000000, z: 1.000000}
-      duration: 0.033000
-  ScriptTypes:
-    "":
-      {}
 - !<Text/c7178f9f-2982-4769-9c9d-724de3f15f26>
   PrefabRemaps:
     []
@@ -7579,22 +7527,6 @@
     - !<own> bcb58cbf-6af5-43d2-b98b-976bba7f4df9
   Components:
     []
-- !<SceneObject/d4c591fc-6fef-401f-b91a-d99f4a86e5ac>
-  PrefabRemaps:
-    []
-  Name: Group
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    - !<own> 0a0b2d30-e06d-4190-815f-5b65d4fa4394
-    - !<own> c532ae0a-2f23-4de6-bf1a-4f38c720b524
-  Components:
-    - !<own> c6e630af-927a-4f3a-8672-016cd2ba4294
 - !<SceneObject/d4c83022-baff-4ff7-960d-8bddca8c0931>
   PrefabRemaps:
     []
@@ -8562,7 +8494,7 @@
     Mode: Texture
     Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
     Texture: !<reference> f0d0606d-3f03-46e8-8b93-5e36aadd199f
-    ColorTint: {x: 0.603922, y: 0.603922, z: 0.603922, w: 1.000000}
+    ColorTint: {x: 0.831373, y: 0.831373, z: 0.831373, w: 1.000000}
     TileCount: 2.000000
     TileZone: Rect
     TextureStretch: FitWidth
@@ -9029,7 +8961,7 @@
       customSpawn: false
       referenceObject: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
       changeDistance: true
-      distanceRange: !<Vec2> {x: 400.000000, y: 500.000000}
+      distanceRange: !<Vec2> {x: 500.000000, y: 600.000000}
       distanceThreshold: !<float> 600.000000
       changeYaw: true
       yawRange: !<Vec2> {x: 40.000000, y: 30.000000}
@@ -9038,7 +8970,7 @@
       pitchRelativeToInitial: false
       pitchRange: !<Vec2> {x: 0.000000, y: 0.000000}
       headlock: !<MappingBased.AssignableType> 2877f52f-55c9-4405-9824-9335aeb84ab6
-      Billboard: !<MappingBased.AssignableType_1> c6e630af-927a-4f3a-8672-016cd2ba4294
+      billboard: true
       spawnOnLateUpdate: false
       respawnOnlyIfNotInFov: true
   ScriptTypes:

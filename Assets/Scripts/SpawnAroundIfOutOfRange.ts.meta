@@ -26,7 +26,7 @@
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
-    Billboard: false
+    billboard: false
     changeDistance: false
     changePitch: false
     changeYaw: false
@@ -68,7 +68,7 @@
       pitchRelativeToInitial: false
       pitchRange: !<Vec2> {x: 0.000000, y: 0.000000}
       headlock: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
-      Billboard: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      billboard: false
       spawnOnLateUpdate: false
       respawnOnlyIfNotInFov: false
   ScriptTypes:
@@ -90,6 +90,6 @@
     - '// @input bool pitchRelativeToInitial {"hint":"Relative to horizon (vertical)", "showIf":"changePitch", "showIfValue":true}'
     - '// @input vec2 pitchRange = {-10,10} {"showIf":"changePitch", "showIfValue":true}'
     - // @input AssignableType headlock
-    - // @input AssignableType_1 Billboard
+    - // @input bool billboard
     - // @input bool spawnOnLateUpdate = true
     - // @input bool respawnOnlyIfNotInFov
