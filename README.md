@@ -2,10 +2,10 @@ Lyrics Everywhere : world first AR Lyrics for Snap Spectacles
 
 This project is an Augmented Reality Lens designed for Snap Spectacles, built to display song lyrics directly in the user's field of view — but in a playful and immersive way that goes far beyond a traditional head‑up display.
 
-<img src="screenshot_01.jpg" height="300"/>
-<img src="screenshot_02.jpg" height="300"/>
-<img src="screenshot_03.jpg" height="300"/>
-<img src="screenshot_04.jpg" height="300"/>
+<img src="docs/screenshot_01.jpg" height="300"/>
+<img src="docs/screenshot_02.jpg" height="300"/>
+<img src="docs/screenshot_03.jpg" height="300"/>
+<img src="docs/screenshot_04.jpg" height="300"/>
 
 [Click here for to watch Lyrcis Everywhere Lens for Snap Spectacles](https://youtu.be/mG_LEPo_CX4) on Youtube
 
